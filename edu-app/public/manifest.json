@@ -1,0 +1,36 @@
+{
+  "name": "EduLearn - Interactive Learning",
+  "short_name": "EduLearn",
+  "description": "Interactive education app - Learn through engaging games and lessons",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "learning", "games"],
+  "shortcuts": [
+    {
+      "name": "Math Lessons",
+      "url": "/#math",
+      "description": "Interactive math lessons"
+    },
+    {
+      "name": "Science Lessons",
+      "url": "/#science",
+      "description": "Science flashcards and quizzes"
+    },
+    {
+      "name": "Language Lessons",
+      "url": "/#language",
+      "description": "Grammar and vocabulary"
+    }
+  ]
+}
