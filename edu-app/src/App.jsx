@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { LessonCard } from './components/EducationComponents'
 import { MathLesson, ScienceLesson, LanguageLesson } from './lessons/SampleLessons'
+import { PhysicsLesson } from './lessons/PhysicsLesson'
 
 function App() {
   const [currentView, setCurrentView] = useState('home')
@@ -32,7 +33,7 @@ function App() {
     {
       id: 'physics',
       title: 'Physics',
-      description: 'Coming soon: Forces and motion',
+      description: 'Explore projectile motion interactively',
       icon: '⚡',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       progress: 0,
@@ -63,6 +64,8 @@ function App() {
         return <ScienceLesson />
       case 'language':
         return <LanguageLesson />
+      case 'physics':
+        return <PhysicsLesson />
       default:
         return null
     }
@@ -113,7 +116,7 @@ function App() {
                   color={lesson.color}
                   progress={lesson.progress}
                   onClick={() => {
-                    if (['math', 'science', 'language'].includes(lesson.id)) {
+                    if (['math', 'science', 'language', 'physics'].includes(lesson.id)) {
                       setCurrentView(lesson.id)
                     }
                   }}
