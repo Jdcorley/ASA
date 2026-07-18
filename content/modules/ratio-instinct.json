@@ -1,0 +1,111 @@
+{
+  "id": "ratio-instinct",
+  "title": "Ratio Instinct",
+  "subject": "math",
+  "tagline": "Feel proportions before you calculate them.",
+  "estimatedMinutes": 10,
+  "accent": "#E85D4C",
+  "lessons": [
+    {
+      "id": "part-whole",
+      "title": "Parts of a whole",
+      "summary": "See a ratio as a relationship, not two lonely numbers.",
+      "steps": [
+        {
+          "id": "intro",
+          "type": "explain",
+          "title": "A ratio is a relationship",
+          "body": "When a recipe says 2 cups flour to 1 cup water, you are not memorizing two amounts. You are locking a relationship: flour is twice the water — no matter how big the batch gets.",
+          "callout": "Think: for every 1 of this, how many of that?"
+        },
+        {
+          "id": "paint-mix",
+          "type": "choice",
+          "prompt": "A paint mix uses 3 parts blue to 1 part white. If you use 2 cups of white, how much blue do you need to keep the same color?",
+          "options": [
+            { "id": "a", "label": "2 cups blue" },
+            { "id": "b", "label": "3 cups blue" },
+            { "id": "c", "label": "6 cups blue" },
+            { "id": "d", "label": "5 cups blue" }
+          ],
+          "correctId": "c",
+          "hint": "White doubled from 1 to 2. Blue must double too.",
+          "success": "Yes — 3:1 scales to 6:2. Same color, bigger batch."
+        },
+        {
+          "id": "same-ratio",
+          "type": "multiSelect",
+          "prompt": "Which pairs describe the same ratio as 2:3?",
+          "options": [
+            { "id": "a", "label": "4:6" },
+            { "id": "b", "label": "6:9" },
+            { "id": "c", "label": "3:2" },
+            { "id": "d", "label": "10:15" }
+          ],
+          "correctIds": ["a", "b", "d"],
+          "hint": "Scale both sides by the same number. Order matters — 3:2 is flipped.",
+          "success": "Exactly. Same relationship, different sizes."
+        },
+        {
+          "id": "order-strength",
+          "type": "order",
+          "prompt": "Arrange these juice mixes from weakest to strongest (least concentrate to most).",
+          "items": [
+            { "id": "weak", "label": "1 concentrate : 4 water" },
+            { "id": "mid", "label": "1 concentrate : 2 water" },
+            { "id": "strong", "label": "1 concentrate : 1 water" }
+          ],
+          "correctOrder": ["weak", "mid", "strong"],
+          "hint": "More water relative to concentrate means a weaker drink.",
+          "success": "Less water per part concentrate → stronger flavor."
+        }
+      ]
+    },
+    {
+      "id": "scale-sense",
+      "title": "Scale sense",
+      "summary": "Resize a scene without breaking the relationship.",
+      "steps": [
+        {
+          "id": "scale-intro",
+          "type": "explain",
+          "title": "Scaling keeps the shape of the relationship",
+          "body": "If every quantity multiplies by the same factor, the ratio stays put. That is why maps, recipes, and screen layouts can grow or shrink and still feel right."
+        },
+        {
+          "id": "map-scale",
+          "type": "number",
+          "prompt": "A map scale is 1 cm : 5 km. A road measures 4 cm on the map. How many kilometers is the real road?",
+          "answer": 20,
+          "unit": "km",
+          "hint": "Each centimeter stands for 5 km. Multiply.",
+          "success": "4 × 5 = 20 km. The ratio did the conversion for you."
+        },
+        {
+          "id": "match-scenes",
+          "type": "match",
+          "prompt": "Match each scene to the ratio it describes.",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": "2 red tiles for every 3 blue",
+              "right": "2:3"
+            },
+            {
+              "id": "p2",
+              "left": "Equal sugar and flour",
+              "right": "1:1"
+            },
+            {
+              "id": "p3",
+              "left": "Five wins out of eight games",
+              "right": "5:8"
+            }
+          ],
+          "hint": "Write left:right in the order the scene mentions.",
+          "success": "You are reading ratios out of everyday language."
+        }
+      ]
+    }
+  ]
+}
