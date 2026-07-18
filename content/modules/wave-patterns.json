@@ -1,0 +1,111 @@
+{
+  "id": "wave-patterns",
+  "title": "Wave Patterns",
+  "subject": "science",
+  "tagline": "Spot amplitude, frequency, and energy in motion.",
+  "estimatedMinutes": 9,
+  "accent": "#2F6FED",
+  "lessons": [
+    {
+      "id": "what-waves-carry",
+      "title": "What waves carry",
+      "summary": "Waves move energy — the water (or air) mostly stays put.",
+      "steps": [
+        {
+          "id": "wave-intro",
+          "type": "explain",
+          "title": "Energy travels, matter mostly nods",
+          "body": "At a stadium, the wave rolls around the stands while people only stand and sit. Sound and ocean ripples work the same idea: a disturbance travels, carrying energy through a medium.",
+          "callout": "Ask: what is moving forward — the stuff, or the pattern?"
+        },
+        {
+          "id": "what-moves",
+          "type": "choice",
+          "prompt": "In a sound wave moving across a room, what mainly travels from speaker to ear?",
+          "options": [
+            { "id": "a", "label": "A wind of air molecules racing across the room" },
+            { "id": "b", "label": "Energy through vibrating air" },
+            { "id": "c", "label": "Silence converting into particles" },
+            { "id": "d", "label": "Light bouncing off dust" }
+          ],
+          "correctId": "b",
+          "hint": "Air jiggles in place; the disturbance propagates.",
+          "success": "Energy rides the pattern. The air is the medium, not the traveler."
+        },
+        {
+          "id": "wave-words",
+          "type": "match",
+          "prompt": "Match each wave idea to its everyday meaning.",
+          "pairs": [
+            {
+              "id": "w1",
+              "left": "Amplitude",
+              "right": "How tall / intense the wave is"
+            },
+            {
+              "id": "w2",
+              "left": "Frequency",
+              "right": "How often peaks arrive"
+            },
+            {
+              "id": "w3",
+              "left": "Wavelength",
+              "right": "Distance between repeating peaks"
+            }
+          ],
+          "hint": "Tallness, timing, and spacing are three different knobs.",
+          "success": "Those three knobs describe most simple waves."
+        },
+        {
+          "id": "pitch-order",
+          "type": "order",
+          "prompt": "Order these sound pitches from lowest frequency to highest.",
+          "items": [
+            { "id": "bass", "label": "Deep bass note" },
+            { "id": "talk", "label": "Speaking voice" },
+            { "id": "whistle", "label": "Sharp whistle" }
+          ],
+          "correctOrder": ["bass", "talk", "whistle"],
+          "hint": "Higher pitch means peaks arrive more often.",
+          "success": "Frequency is the hidden clock behind pitch."
+        }
+      ]
+    },
+    {
+      "id": "energy-and-size",
+      "title": "Energy and size",
+      "summary": "Bigger amplitude usually means more energy in the wave.",
+      "steps": [
+        {
+          "id": "amp-intro",
+          "type": "explain",
+          "title": "Louder is often larger swings",
+          "body": "Turning up a speaker increases amplitude: air compressions get stronger. The note can stay the same frequency while the energy in each swing grows."
+        },
+        {
+          "id": "amp-check",
+          "type": "multiSelect",
+          "prompt": "Which changes usually increase a wave’s energy?",
+          "options": [
+            { "id": "a", "label": "Increasing amplitude" },
+            { "id": "b", "label": "Keeping amplitude tiny while changing color labels" },
+            { "id": "c", "label": "For many waves, raising frequency" },
+            { "id": "d", "label": "Drawing the wave with a thicker pencil only" }
+          ],
+          "correctIds": ["a", "c"],
+          "hint": "Ignore drawing tricks. Think physical intensity and rate.",
+          "success": "Amplitude and frequency both shape the energy story."
+        },
+        {
+          "id": "cycles",
+          "type": "number",
+          "prompt": "A wave has frequency 5 Hz. How many full cycles happen in 3 seconds?",
+          "answer": 15,
+          "unit": "cycles",
+          "hint": "Frequency × time = number of cycles.",
+          "success": "5 cycles each second × 3 seconds = 15."
+        }
+      ]
+    }
+  ]
+}

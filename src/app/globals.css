@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0f1a2a;
+  --muted: #5b6b7c;
+  --surface: #ffffff;
+  --wash: #eef2f6;
+  --line: #d7e0ea;
+  --accent: #e85d4c;
+  --teal: #1fa7a0;
+  --background: #e8eef5;
+  --foreground: #0f1a2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(2%, -1.5%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(232, 93, 76, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(31, 167, 160, 0.14), transparent 50%),
+    linear-gradient(180deg, #f5f8fb 0%, var(--background) 45%, #e4ebf3 100%);
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(15, 26, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 26, 42, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at center, black, transparent 85%);
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

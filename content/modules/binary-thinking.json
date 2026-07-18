@@ -1,0 +1,98 @@
+{
+  "id": "binary-thinking",
+  "title": "Binary Thinking",
+  "subject": "cs",
+  "tagline": "Build computer intuition one bit at a time.",
+  "estimatedMinutes": 12,
+  "accent": "#1FA7A0",
+  "lessons": [
+    {
+      "id": "bits-as-choices",
+      "title": "Bits as choices",
+      "summary": "A bit is not a number first — it is a decision.",
+      "steps": [
+        {
+          "id": "bit-intro",
+          "type": "explain",
+          "title": "One bit, two possibilities",
+          "body": "A light switch is a bit: off or on. Computers store mountains of information by stacking simple yes/no decisions. The power comes from combining many tiny choices.",
+          "callout": "0 and 1 are labels for two states — not just small integers."
+        },
+        {
+          "id": "how-many-states",
+          "type": "choice",
+          "prompt": "How many distinct patterns can 3 bits represent?",
+          "options": [
+            { "id": "a", "label": "3" },
+            { "id": "b", "label": "6" },
+            { "id": "c", "label": "8" },
+            { "id": "d", "label": "9" }
+          ],
+          "correctId": "c",
+          "hint": "Each bit doubles the possibilities: 2 × 2 × 2.",
+          "success": "8 patterns — from 000 to 111."
+        },
+        {
+          "id": "which-are-bits",
+          "type": "multiSelect",
+          "prompt": "Which of these can honestly act like a single bit?",
+          "options": [
+            { "id": "a", "label": "A coin flip (heads/tails)" },
+            { "id": "b", "label": "A dimmer switch with many brightness levels" },
+            { "id": "c", "label": "A checkbox (checked/unchecked)" },
+            { "id": "d", "label": "A password with 12 characters" }
+          ],
+          "correctIds": ["a", "c"],
+          "hint": "Look for exactly two clear states — not many.",
+          "success": "Bits thrive on clean binary decisions."
+        },
+        {
+          "id": "order-powers",
+          "type": "order",
+          "prompt": "Order these from fewest patterns to most patterns.",
+          "items": [
+            { "id": "one", "label": "1 bit" },
+            { "id": "two", "label": "2 bits" },
+            { "id": "four", "label": "4 bits" }
+          ],
+          "correctOrder": ["one", "two", "four"],
+          "hint": "More bits → exponentially more patterns.",
+          "success": "2, then 4, then 16 distinct patterns."
+        }
+      ]
+    },
+    {
+      "id": "place-values",
+      "title": "Place values",
+      "summary": "Binary counting uses powers of two instead of tens.",
+      "steps": [
+        {
+          "id": "places-intro",
+          "type": "explain",
+          "title": "Columns that double",
+          "body": "In decimal, columns are ones, tens, hundreds. In binary, columns are ones, twos, fours, eights… Each step left doubles the place value."
+        },
+        {
+          "id": "decode",
+          "type": "number",
+          "prompt": "What decimal value is the binary number 1011?",
+          "answer": 11,
+          "hint": "8 + 0 + 2 + 1 — turn on the columns with a 1.",
+          "success": "1011₂ = 8 + 2 + 1 = 11."
+        },
+        {
+          "id": "match-binary",
+          "type": "match",
+          "prompt": "Match each binary pattern to its decimal value.",
+          "pairs": [
+            { "id": "m1", "left": "0001", "right": "1" },
+            { "id": "m2", "left": "0100", "right": "4" },
+            { "id": "m3", "left": "1000", "right": "8" }
+          ],
+          "hint": "Find which single place value is switched on.",
+          "success": "You are reading place value like a computer does."
+        }
+      ]
+    }
+  ]
+}
